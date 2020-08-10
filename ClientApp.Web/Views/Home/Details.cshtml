@@ -1,0 +1,32 @@
+﻿@model ClientApp.Models.Entities.Client
+@{
+}
+
+<h1>Detalles del Cliente: @Model.Name.ToUpper()</h1>
+
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        @if (Model.Picture == null || Model.Picture == "")
+        {
+            <img src="@Url.Content(Model.Picture)" alt="No hay Cliente" />
+        }
+        else
+        {
+            <img src="@Url.Content(Model.Picture)" class="card-img-top" alt="Foto del Cliente">
+        }
+        <div class="card-body">
+            <h5 class="card-title">Cliente: @Model.Name.ToUpper()</h5>
+            <p class="card-text">
+                @if (Model.State == 1)
+                {
+                    <span class="badge badge-primary">Activo</span>
+                }
+                else
+                {
+                    <span class="badge badge-secondary">Inactivo</span>
+                }
+            </p>
+            @Html.ActionLink("Regresar", "List", "Home", null, htmlAttributes: new { @class = "btn btn-info" })
+        </div>
+    </div>
+</div>

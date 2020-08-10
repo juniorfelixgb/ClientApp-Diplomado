@@ -9,5 +9,6 @@ namespace ClientApp.DataAccess.Contract
     public interface IClientAccess
     {
         Task<List<Client>> ReadData();
+        Task<Client> GetClient(int Id);
     }
 }

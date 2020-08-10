@@ -33,9 +33,15 @@ namespace ClientApp.Web.Controllers
             return View();
         }
 
-        public async Task<ActionResult<List<Client>>> Client()
+        public async Task<ActionResult<List<Client>>> List()
         {
             var client = await _clientAccess.ReadData();
+            return View(client);
+        }
+
+        public async Task<ActionResult<Client>> Details(int Id)
+        {
+            var client = await _clientAccess.GetClient(Id);
             return View(client);
         }
 

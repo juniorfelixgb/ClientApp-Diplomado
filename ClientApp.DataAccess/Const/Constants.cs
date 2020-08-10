@@ -6,6 +6,6 @@ namespace ClientApp.DataAccess.Consts
 {
     public class Constants
     {
-        public static string Ruta = @"C:\Users\junio\source\repos\ClientApp\ClientApp.DataAccess\Data\Data.txt";
+        public static string Path = @"C:\Users\junio\source\repos\ClientApp\ClientApp.DataAccess\Data\Data.txt";
     }
 }

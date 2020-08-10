@@ -12,17 +12,16 @@
             </div>
         </div>
 
-        <h1>Listado Clientes</h1>
+        <h1>Listado de Clientes</h1>
 
         <div class="row mt-5">
             <div class="col text-center">
-                <table class="table table-borderless">
-                    <thead>
+                <table class="table">
+                    <thead class="thead-dark">
                         <tr>
                             <td>Codigo</td>
                             <td>Nombre</td>
                             <td>Estado</td>
-                            <td>Foto</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,13 +29,19 @@
                         {
                             <tr>
                                 <td>@item.Code</td>
-                                <td><a href="#">@item.Name</a></td>
-                                <td>@item.State</td>
                                 <td>
-                                    <img src="@item.Picture" />
+                                    <a href="./Details/@item.Code">@item.Name</a>
                                 </td>
+                                @if (item.State == 1)
+                                {
+                                    <td class="bg-primary">Activo</td>
+                                }
+                                else
+                                {
+                                    <td class="bg-secondary">Inactivo</td>
+                                }
                             </tr>
-                         } 
+                         }
                     </tbody>
                 </table>
             </div>
