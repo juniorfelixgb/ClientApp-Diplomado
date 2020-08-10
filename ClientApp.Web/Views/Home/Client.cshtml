@@ -1,0 +1,44 @@
+﻿@model List<ClientApp.Models.Entities.Client>
+@{ 
+
+}
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="text-center">
+                    <img src="~/images/client.png" alt="Clientes" class="rounded mx-auto" />
+                </div>
+            </div>
+        </div>
+
+        <h1>Listado Clientes</h1>
+
+        <div class="row mt-5">
+            <div class="col text-center">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <td>Codigo</td>
+                            <td>Nombre</td>
+                            <td>Estado</td>
+                            <td>Foto</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Code</td>
+                                <td><a href="#">@item.Name</a></td>
+                                <td>@item.State</td>
+                                <td>
+                                    <img src="@item.Picture" />
+                                </td>
+                            </tr>
+                         } 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

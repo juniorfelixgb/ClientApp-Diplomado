@@ -1,0 +1,4 @@
+﻿1,carlos,1
+2,pedro,1
+3,juan,2
+4,maria,1
